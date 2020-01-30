@@ -29,7 +29,7 @@ public:
 
 private:
     // Include the default reference counting implementation.
-    IMPLEMENT_REFCOUNTING(StdInputStreamReader)
+    IMPLEMENT_REFCOUNTING(StdInputStreamReader); //Fixed in 0.3.4a
 };
 
 } // namespace job

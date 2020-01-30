@@ -31,6 +31,7 @@ void RenderProcessHandler::OnContextReleased(
 
 bool RenderProcessHandler::OnProcessMessageReceived(
     CefRefPtr<CefBrowser> browser,
+    CefRefPtr<CefFrame> frame, //Newly added 0.3.4a
     CefProcessId source_process,
     CefRefPtr<CefProcessMessage> message
 ) {

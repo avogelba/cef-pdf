@@ -28,7 +28,7 @@ private:
     std::string m_content;
 
     // Include the default reference counting implementation.
-    IMPLEMENT_REFCOUNTING(Local)
+    IMPLEMENT_REFCOUNTING(Local); //Fixed in 0.3.4a
 };
 
 } // namespace job

@@ -22,7 +22,7 @@ public:
 
 private:
     // Include the default reference counting implementation.
-    IMPLEMENT_REFCOUNTING(Visitor)
+    IMPLEMENT_REFCOUNTING(Visitor); //Fixed in 0.3.4a
 };
 
 } // namespace job

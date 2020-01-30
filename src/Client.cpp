@@ -28,7 +28,10 @@ Client::Client() :
 {
     m_settings.no_sandbox = true;
     m_settings.windowless_rendering_enabled = true;
-    m_settings.command_line_args_disabled = true;
+    //m_settings.command_line_args_disabled = true;
+    m_settings.command_line_args_disabled = false;
+    m_settings.ignore_certificate_errors = true;
+
 
     m_windowInfo.windowless_rendering_enabled = true;
 
@@ -100,7 +103,7 @@ void Client::CreateBrowsers(unsigned int browserCount)
     while (m_pendingBrowsersCount > 0 && m_browsersCount <= constants::maxProcesses) {
         --m_pendingBrowsersCount;
         ++m_browsersCount;
-        CefBrowserHost::CreateBrowser(m_windowInfo, this, "", m_browserSettings, NULL);
+        CefBrowserHost::CreateBrowser(m_windowInfo, this, "", m_browserSettings, NULL,NULL); //fixed in 0.3.4a
     }
 }
 
@@ -185,6 +188,7 @@ CefRefPtr<CefRequestHandler> Client::GetRequestHandler()
 
 bool Client::OnProcessMessageReceived(
     CefRefPtr<CefBrowser> browser,
+    CefRefPtr<CefFrame> frame, //Newly added 0.3.4a
     CefProcessId source_process,
     CefRefPtr<CefProcessMessage> message
 ) {

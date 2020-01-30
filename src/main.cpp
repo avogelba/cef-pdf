@@ -31,6 +31,7 @@ void printHelp(std::string name)
     std::cout << std::endl;
     std::cout << "Options:" << std::endl;
     std::cout << "  --help -h         This help screen." << std::endl;
+    std::cout << "  --version -v      Version information." << std::endl;
     std::cout << "  --url=<url>       URL to load, may be http, file, data, anything supported by Chromium." << std::endl;
     std::cout << "  --file=<path>     File path to load using file:// scheme. May be relative to current directory." << std::endl;
     std::cout << "  --stdin           Read content from standard input until EOF (Unix: Ctrl+D, Windows: Ctrl+Z)." << std::endl;
@@ -58,6 +59,12 @@ void printHelp(std::string name)
     std::cout << "  PDF file name to create. Default is to write binary data to standard output." << std::endl;
     std::cout << std::endl;
 }
+
+void printVersion(std::string name)
+{
+    std::cout << name << " v" << cefpdf::constants::version << std::endl;
+}
+
 
 std::string getExecutableName(CefRefPtr<CefCommandLine> commandLine)
 {
@@ -239,6 +246,11 @@ int main(int argc, char* argv[])
 
     if (commandLine->HasSwitch("help") || commandLine->HasSwitch("h")) {
         printHelp(getExecutableName(commandLine));
+        return 0;
+    }
+
+    if (commandLine->HasSwitch("version") || commandLine->HasSwitch("v")) {
+        printVersion(getExecutableName(commandLine));
         return 0;
     }
 

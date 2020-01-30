@@ -16,7 +16,7 @@ public:
 
 private:
     // Include the default reference counting implementation.
-    IMPLEMENT_REFCOUNTING(StdInput)
+    IMPLEMENT_REFCOUNTING(StdInput); //Fixed in 0.3.4a
 };
 
 } // namespace job

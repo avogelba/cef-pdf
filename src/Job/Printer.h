@@ -49,7 +49,7 @@ private:
     CefRefPtr<CefBrowser> m_browser;
 
     // Include the default reference counting implementation.
-    IMPLEMENT_REFCOUNTING(Printer)
+    IMPLEMENT_REFCOUNTING(Printer); //Fixed in 0.3.4a
 };
 
 } // namespace job

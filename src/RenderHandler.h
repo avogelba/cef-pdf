@@ -26,7 +26,7 @@ public:
 
 private:
     // Include the default reference counting implementation.
-    IMPLEMENT_REFCOUNTING(RenderHandler)
+    IMPLEMENT_REFCOUNTING(RenderHandler); //Fixed in 0.3.4a
 
     int m_viewWidth;
     int m_viewHeight;

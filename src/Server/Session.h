@@ -95,7 +95,7 @@ private:
     std::string m_chunkStart;
 
     // Include the default reference counting implementation.
-    IMPLEMENT_REFCOUNTING(Session)
+    IMPLEMENT_REFCOUNTING(Session); //fixed in 0.3.4a
 };
 
 } // namespace server

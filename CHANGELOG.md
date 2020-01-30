@@ -1,5 +1,18 @@
 Changelog
 ===
+
+### 0.3.4a (2020-01-30) [Tangro Changes](https://github.com/tangro/cef-pdf) and own fixes
+* Building with CEF 73 to 79.1.31+gfc9ef34+chromium-79.0.3945.117 (Windows, 64bit - others OS not tested)
+* Activated command line switches for underlying cef: e.g. now its possible to use proxies via `--proxy-server="server.name:8080"` (and other cef command line switches)
+* Certificate errors when loading from HTTPS-urls should be ignored now
+* updated version to 0.3.4a
+* changed .gitignore and added common VisualStudio settings
+* fixed IMPLEMENT_REFCOUNTING() errors on compile in VS2019
+* fixed OnProcessMessageReceived errors on compile in VS2019
+* updated readme with changed and howto for VS2019
+* fixed call CreateBrowser in function CreateBrowsers
+* I hate it if there is no --version, so I added that option
+
 ### 0.3.4 (2018-03-20)
 * Building with CEF 3.3325.1750.gaabe4c4 / Chromium 65.0.3325.146 (Windows, Linux & OS X, 64bit)
 * Bug fixes
