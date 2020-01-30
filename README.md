@@ -45,7 +45,7 @@ In addition to POSTing content inside the request body, special HTTP header `Con
 
 
 ### Changelog
-# Tangro-Adjustments:
+#### Tangro-Adjustments:
 
 a) in src\Client.cpp
 ```
@@ -65,9 +65,8 @@ m_settings.ignore_certificate_errors = true;
 
 This settings ignores any certificate error in the future; e.g. if any certificate or even CA validity has expired. the rest is identical to the project cef-pdf.
 
-# .gitignore changes
+#### .gitignore changes
 Added VisualStudio .gitignore defaults entries from GitHub.com
-
 
 
 ### Building
@@ -86,8 +85,8 @@ $ ninja
 I had to struggle, as I do not know cmake and not to much about C++ to compile.
 You can do it different, but his is just a hint how I got it working.
 
-Treet structure I use:
-
+Tree-Structure I use:
+```
 C:\source\repros\cef-pdf\
 	├───asio
 	├───cef
@@ -103,6 +102,7 @@ C:\source\repros\cef-pdf\
 	├───resource
 	├───src
 	└───VS2019
+```
 
 Build I do will be x64 & release
 
